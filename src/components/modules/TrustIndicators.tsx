@@ -1,23 +1,31 @@
 import { Container } from "@/components/layout/Container";
 
 const metrics = [
-  { value: "127", label: "Projects Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years Combined Experience" },
-  { value: "24/7", label: "Security Monitoring" },
+  { value: "127+", label: "Projects Delivered" },
+  { value: "15K+", label: "Vulnerabilities Fixed" },
+  { value: "99.8%", label: "Uptime Maintained" },
+  { value: "$2B+", label: "Transactions Secured" },
 ];
 
 export function TrustIndicators() {
   return (
-    <section className="py-12 bg-neutral-50">
+    <section className="py-16 bg-neutral-50 border-y border-neutral-200 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5" />
+      
       <Container>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {metrics.map((metric, idx) => (
-            <div key={idx} className="text-center">
-              <span className="block text-4xl font-bold text-neutral-950 mb-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+          {metrics.map((metric, index) => (
+            <div
+              key={metric.label}
+              className="text-center animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="text-4xl md:text-5xl font-bold mb-2 gradient-text">
                 {metric.value}
-              </span>
-              <span className="text-sm text-neutral-600">{metric.label}</span>
+              </div>
+              <div className="text-sm text-neutral-600 uppercase tracking-wider font-semibold">
+                {metric.label}
+              </div>
             </div>
           ))}
         </div>

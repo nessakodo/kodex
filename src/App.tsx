@@ -12,17 +12,29 @@ import Insights from "./pages/Insights";
 import Showcase from "./pages/Showcase";
 import Contact from "./pages/Contact";
 import Security from "./pages/Security";
+import Careers from "./pages/Careers";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import { Helmet } from "react-helmet";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <Helmet defaultTitle="KODEX STUDIO - Security Infrastructure for Modern Software">
+      <meta name="description" content="Enterprise-grade security architecture, cryptography, and infrastructure hardening services. We build and secure production systems for organizations that can't afford compromise." />
+      <meta name="keywords" content="cybersecurity, security architecture, cryptography, cloud security, compliance, HIPAA, SOC 2, penetration testing" />
+      <meta property="og:title" content="KODEX STUDIO - Security Infrastructure for Modern Software" />
+      <meta property="og:description" content="Enterprise-grade security solutions powered by cutting-edge technology." />
+      <meta property="og:type" content="website" />
+      <link rel="canonical" href="https://kodexstudio.com" />
+    </Helmet>
+    
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col bg-background">
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>
@@ -36,6 +48,8 @@ const App = () => (
               <Route path="/showcase" element={<Showcase />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/security" element={<Security />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
