@@ -69,7 +69,7 @@ const Showcase = () => {
           {caseStudies.map((study) => (
             <article
               key={study.slug}
-              className="border border-neutral-200 rounded-lg p-8 lg:p-12 bg-white hover:border-neutral-300 hover:shadow-sm transition-smooth"
+              className="border border-border rounded-lg p-8 lg:p-12 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
               <div className="grid lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">

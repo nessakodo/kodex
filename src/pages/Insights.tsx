@@ -47,8 +47,8 @@ const Insights = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-neutral-200">
-                <th className="text-left py-4 px-4 text-sm font-semibold text-neutral-950">
+              <tr className="border-b border-border">
+                <th className="text-left py-4 px-4 text-sm font-semibold text-foreground">
                   Title
                 </th>
                 <th className="text-left py-4 px-4 text-sm font-semibold text-neutral-950 hidden md:table-cell">
@@ -66,7 +66,7 @@ const Insights = () => {
               {articles.map((article) => (
                 <tr
                   key={article.slug}
-                  className="border-b border-neutral-200 hover:bg-neutral-50 transition-colors-smooth"
+                  className="border-b border-border hover:bg-card/50 transition-colors-smooth"
                 >
                   <td className="py-4 px-4">
                     <Link
@@ -102,7 +102,7 @@ const Insights = () => {
             <Link
               key={article.slug}
               to={`/insights/${article.slug}`}
-              className="block border border-neutral-200 rounded-lg p-6 hover:border-neutral-300 hover:shadow-sm transition-smooth"
+              className="block border border-border rounded-lg p-6 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
               <span className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-2 py-1 rounded mb-3">
                 {article.category}

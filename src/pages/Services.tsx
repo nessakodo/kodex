@@ -99,7 +99,7 @@ const Services = () => {
           {services.map((service, idx) => (
             <article
               key={idx}
-              className="border border-neutral-200 rounded-lg p-8 bg-white hover:border-neutral-300 hover:shadow-sm transition-smooth"
+              className="border border-border rounded-lg p-8 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
               <div className="w-12 h-12 rounded-full bg-accent-subtle flex items-center justify-center mb-6">
                 <service.icon
@@ -123,29 +123,29 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-neutral-50 border border-neutral-200 rounded-lg p-8">
+        <div className="mt-16 bg-card/50 border border-border rounded-lg p-8">
           <h2 className="h3 mb-4">Engagement Model</h2>
-          <p className="text-neutral-600 mb-6 leading-relaxed">
+          <p className="text-muted-foreground mb-6 leading-relaxed">
             We offer flexible engagement models to meet your organization's needs:
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-semibold text-neutral-950 mb-2">Project-Based</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
+              <h3 className="font-semibold text-foreground mb-2">Project-Based</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Fixed-scope engagements with defined deliverables and timelines.
                 Ideal for specific security initiatives.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-neutral-950 mb-2">Retainer</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
+              <h3 className="font-semibold text-foreground mb-2">Retainer</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Ongoing security support with allocated hours per month. Perfect
                 for continuous improvement.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-neutral-950 mb-2">Embedded</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
+              <h3 className="font-semibold text-foreground mb-2">Embedded</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Full-time integration with your team for long-term security
                 transformation initiatives.
               </p>

@@ -78,7 +78,7 @@ const Careers = () => {
               {positions.map((position) => (
                 <div
                   key={position.title}
-                  className="bg-card border border-neutral-200 rounded-xl p-6 hover:border-cyan-400/50 hover:shadow-lg transition-all group"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
@@ -108,7 +108,7 @@ const Careers = () => {
           </div>
 
           {/* Contact */}
-          <div className="text-center bg-gradient-subtle border border-neutral-200 rounded-xl p-12">
+          <div className="text-center bg-card/50 border border-border rounded-xl p-12">
             <Mail className="h-12 w-12 mx-auto mb-4 text-cyan-400" />
             <h3 className="h3 mb-4">Don't See a Fit?</h3>
             <p className="text-neutral-600 mb-6 max-w-xl mx-auto">

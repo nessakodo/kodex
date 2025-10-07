@@ -47,7 +47,7 @@ const Security = () => {
             {securityPractices.map((practice, idx) => (
               <div
                 key={idx}
-                className="border border-neutral-200 rounded-lg p-6 bg-white"
+                className="border border-border rounded-lg p-6 bg-card"
               >
                 <div className="w-10 h-10 rounded-full bg-accent-subtle flex items-center justify-center mb-4">
                   <practice.icon
@@ -105,12 +105,12 @@ const Security = () => {
 
         <section className="mb-16">
           <h2 className="h2 mb-6">Vulnerability Disclosure</h2>
-          <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-            <p className="text-neutral-600 leading-relaxed mb-4">
+          <div className="bg-card/50 border border-border rounded-lg p-6">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               We welcome responsible disclosure of security vulnerabilities. If
               you discover a security issue, please contact us at:
             </p>
-            <p className="font-mono text-sm text-neutral-950 bg-white border border-neutral-200 rounded px-4 py-3">
+            <p className="font-mono text-sm text-foreground bg-card border border-border rounded px-4 py-3">
               security@kodexstudio.com
             </p>
             <p className="text-sm text-neutral-600 mt-4">
@@ -128,16 +128,16 @@ const Security = () => {
               and standards:
             </p>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="border border-neutral-200 rounded-lg p-6 bg-white">
-                <h3 className="font-semibold text-neutral-950 mb-2">SOC 2 Type II</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+              <div className="border border-border rounded-lg p-6 bg-card">
+                <h3 className="font-semibold text-foreground mb-2">SOC 2 Type II</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Annual third-party audit of security, availability, and
                   confidentiality controls.
                 </p>
               </div>
-              <div className="border border-neutral-200 rounded-lg p-6 bg-white">
-                <h3 className="font-semibold text-neutral-950 mb-2">HIPAA</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+              <div className="border border-border rounded-lg p-6 bg-card">
+                <h3 className="font-semibold text-foreground mb-2">HIPAA</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Business Associate Agreements available for healthcare clients
                   requiring PHI protection.
                 </p>

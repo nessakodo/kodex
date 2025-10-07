@@ -38,27 +38,27 @@ const Mission = () => {
             a commitment to doing things correctly.
           </p>
 
-          <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-8 mt-12">
+          <div className="bg-card/50 border border-border rounded-lg p-8 mt-12">
             <h3 className="h3 mb-4">Our Standards</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-neutral-600">
-                  <strong className="text-neutral-950 font-medium">Evidence-based security:</strong> Every
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground font-medium">Evidence-based security:</strong> Every
                   recommendation backed by threat modeling and risk analysis.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-neutral-600">
-                  <strong className="text-neutral-950 font-medium">Production-ready implementation:</strong> Code
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground font-medium">Production-ready implementation:</strong> Code
                   that ships, not proof-of-concepts that stall.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-neutral-600">
-                  <strong className="text-neutral-950 font-medium">Transparent communication:</strong> Clear
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground font-medium">Transparent communication:</strong> Clear
                   documentation, measurable outcomes, no security theater.
                 </span>
               </li>

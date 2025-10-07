@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div className="py-24">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-16 lg:items-start">
           <div>
             <header className="mb-8">
               <p className="text-overline mb-2">CONTACT</p>
@@ -60,33 +60,33 @@ const Contact = () => {
               <div>
                 <h2 className="h3 mb-3">What to Expect</h2>
                 <ul className="space-y-3">
-                  <li className="flex items-start text-sm text-neutral-600">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-3 flex-shrink-0" />
+                  <li className="flex items-start text-sm text-muted-foreground">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
                     <span className="leading-relaxed">
-                      <strong className="text-neutral-950 font-medium">Initial consultation:</strong> 30-minute
+                      <strong className="text-foreground font-medium">Initial consultation:</strong> 30-minute
                       discussion to understand your needs and challenges.
                     </span>
                   </li>
-                  <li className="flex items-start text-sm text-neutral-600">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-3 flex-shrink-0" />
+                  <li className="flex items-start text-sm text-muted-foreground">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
                     <span className="leading-relaxed">
-                      <strong className="text-neutral-950 font-medium">Scoping document:</strong> Detailed proposal
+                      <strong className="text-foreground font-medium">Scoping document:</strong> Detailed proposal
                       with approach, timeline, and investment required.
                     </span>
                   </li>
-                  <li className="flex items-start text-sm text-neutral-600">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-3 flex-shrink-0" />
+                  <li className="flex items-start text-sm text-muted-foreground">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
                     <span className="leading-relaxed">
-                      <strong className="text-neutral-950 font-medium">Clear communication:</strong> No sales
+                      <strong className="text-foreground font-medium">Clear communication:</strong> No sales
                       pressure, just honest assessment of how we can help.
                     </span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-                <h3 className="font-semibold text-neutral-950 mb-2">Response Time</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+              <div className="bg-card/50 border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-2">Response Time</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   We respond to all inquiries within 24 hours during business
                   days. For urgent security concerns, please indicate in your
                   message.
@@ -95,12 +95,12 @@ const Contact = () => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:pt-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-neutral-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Full Name *
                 </label>
@@ -118,7 +118,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-neutral-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Email Address *
                 </label>
@@ -136,7 +136,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-neutral-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Company
                 </label>
@@ -153,7 +153,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-neutral-700"
+                  className="block text-sm font-medium text-foreground"
                 >
                   Message *
                 </label>
