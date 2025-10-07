@@ -8,6 +8,7 @@ import healthImg from "@/assets/case-study-health.jpg";
 
 const caseStudies = [
   {
+    slug: "cryptiq",
     category: "CRYPTOGRAPHY",
     title: "Post-Quantum Encryption Suite",
     image: quantumImg,
@@ -18,9 +19,9 @@ const caseStudies = [
     summary:
       "Implemented NIST-approved post-quantum algorithms for financial infrastructure handling $2B+ daily transactions.",
     tech: ["Rust", "WebAssembly", "Kyber", "Dilithium"],
-    href: "/showcase",
   },
   {
+    slug: "phishguard",
     category: "AI/ML SECURITY",
     title: "Automated Threat Detection",
     image: aiImg,
@@ -31,9 +32,9 @@ const caseStudies = [
     summary:
       "NLP-based email analysis pipeline with automated threat classification for regional healthcare system.",
     tech: ["Python", "Transformers", "Redis", "Graph API"],
-    href: "/showcase",
   },
   {
+    slug: "caresense",
     category: "HEALTHCARE",
     title: "HIPAA-Compliant Triage System",
     image: healthImg,
@@ -44,7 +45,19 @@ const caseStudies = [
     summary:
       "AI triage assistant with EHR integration and clinical decision support across multi-site urgent care network.",
     tech: ["FastAPI", "FHIR", "Azure Health", "scikit-learn"],
-    href: "/showcase",
+  },
+  {
+    slug: "verdant",
+    category: "ENVIRONMENTAL AI / IOT",
+    title: "VERDANT — Living Sensor Platform",
+    image: quantumImg,
+    metrics: [
+      { value: "4km", label: "Mesh Range" },
+      { value: "12+", label: "Sensor Modules" },
+    ],
+    summary:
+      "Modular drone system blending bioelectric sensing, LoRa mesh networking, and edge AI for environmental awareness.",
+    tech: ["ESP32", "LoRa", "TensorFlow Lite", "Arduino"],
   },
 ];
 
@@ -64,8 +77,8 @@ export function CaseStudyPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {caseStudies.map((study, index) => (
             <Link
-              key={study.title}
-              to={study.href}
+              key={study.slug}
+              to={`/showcase/${study.slug}`}
               className="group relative bg-card border border-neutral-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1"
               style={{ animationDelay: `${index * 150}ms` }}
             >

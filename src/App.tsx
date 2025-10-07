@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
@@ -21,6 +21,36 @@ import { Helmet } from "react-helmet";
 
 const queryClient = new QueryClient();
 
+function AppContent() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  return (
+    <div className="flex min-h-screen flex-col bg-background">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <Header />
+      <main id="main-content" className={`flex-1 ${!isHome ? 'pt-20' : ''}`}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/showcase" element={<Showcase />} />
+          <Route path="/showcase/:slug" element={<CaseStudyDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <Helmet defaultTitle="KODEX STUDIO - Security Infrastructure for Modern Software">
@@ -37,28 +67,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <div className="flex min-h-screen flex-col bg-background">
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
-          <Header />
-          <main id="main-content" className="flex-1">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/mission" element={<Mission />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/insights" element={<Insights />} />
-              <Route path="/showcase" element={<Showcase />} />
-              <Route path="/showcase/:slug" element={<CaseStudyDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

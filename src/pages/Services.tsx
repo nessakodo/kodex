@@ -1,9 +1,7 @@
 import { Container } from "@/components/layout/Container";
-import { ShieldCheck, Lock, Activity, Code, Cloud, Search } from "lucide-react";
 
 const services = [
   {
-    icon: ShieldCheck,
     title: "Security Architecture",
     description:
       "Design and implementation of secure system architectures using defense-in-depth and zero-trust principles.",
@@ -16,7 +14,6 @@ const services = [
     ],
   },
   {
-    icon: Lock,
     title: "Application Security",
     description:
       "Comprehensive application security from code to deployment, ensuring secure software development lifecycles.",
@@ -29,7 +26,6 @@ const services = [
     ],
   },
   {
-    icon: Activity,
     title: "Security Operations",
     description:
       "Continuous security monitoring, incident response, and operational security management.",
@@ -42,7 +38,6 @@ const services = [
     ],
   },
   {
-    icon: Code,
     title: "Secure Development",
     description:
       "Embedding security into the development process with tooling, automation, and best practices.",
@@ -55,7 +50,6 @@ const services = [
     ],
   },
   {
-    icon: Cloud,
     title: "Cloud Security",
     description:
       "Cloud-native security implementation across AWS, Azure, and GCP with focus on scalability and compliance.",
@@ -68,7 +62,6 @@ const services = [
     ],
   },
   {
-    icon: Search,
     title: "Security Assessment",
     description:
       "Comprehensive security evaluations to identify vulnerabilities and provide actionable remediation guidance.",
@@ -103,13 +96,7 @@ const Services = () => {
               key={idx}
               className="border border-border rounded-lg p-8 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
-              <div className="w-12 h-12 rounded-full bg-accent-subtle flex items-center justify-center mb-6">
-                <service.icon
-                  className="h-6 w-6 text-accent"
-                  strokeWidth={1.5}
-                />
-              </div>
-              <h2 className="h3 mb-3">{service.title}</h2>
+              <h2 className="h3 mb-4">{service.title}</h2>
               <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
                 {service.description}
               </p>
