@@ -95,7 +95,7 @@ const Showcase = () => {
                     <span className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-3 py-1 rounded mb-4">
                       {study.category}
                     </span>
-                    <h2 className="h2 mb-3">{study.title}</h2>
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight tracking-tight">{study.title}</h2>
                     <p className="text-sm text-neutral-600">{study.client}</p>
                   </header>
 

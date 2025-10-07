@@ -12,7 +12,7 @@ const navigation = [
 
 const homeNavigation = [
   { name: "SERVICES", href: "#services" },
-  { name: "PROJECTS", href: "#projects" },
+  { name: "SHOWCASE", href: "#projects" },
   { name: "INSIGHTS", href: "/insights" },
   { name: "CONTACT", href: "/contact" },
 ];

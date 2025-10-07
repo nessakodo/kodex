@@ -126,7 +126,7 @@ export function CaseStudyPreview() {
         <div className="text-center">
           <Button asChild size="lg" variant="outline">
             <Link to="/showcase">
-              View All Projects
+              View All Showcase
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

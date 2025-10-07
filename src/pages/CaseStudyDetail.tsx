@@ -214,35 +214,35 @@ const CaseStudyDetail = () => {
 
         <header className="mb-16 max-w-4xl text-center mx-auto animate-fade-in">
           <p className="text-overline mb-4">{study.category}</p>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
             {study.title.split('—')[0]}
             <span className="gradient-text">—{study.title.split('—')[1]}</span>
           </h1>
-          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed mb-8 px-4">
             {study.tagline}
           </p>
-          <p className="text-neutral-700 leading-relaxed">{study.summary}</p>
+          <p className="text-neutral-600 leading-relaxed px-4">{study.summary}</p>
         </header>
 
         {/* Metrics */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 p-8 bg-card border border-border rounded-lg">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 p-6 sm:p-8 bg-card border border-border rounded-lg max-w-4xl mx-auto">
           {study.metrics.map((metric, idx) => (
             <div key={idx} className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-accent mb-2">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-2">
                 {metric.value}
               </div>
-              <div className="text-sm text-neutral-600">{metric.label}</div>
+              <div className="text-xs sm:text-sm text-neutral-600 leading-tight">{metric.label}</div>
             </div>
           ))}
         </div>
 
         {/* Content Sections */}
-        <div className="max-w-4xl space-y-12 mb-16">
+        <div className="max-w-4xl mx-auto space-y-12 mb-16 px-4">
           {study.sections.map((section, idx) => (
             <section key={idx}>
-              <h2 className="h2 mb-4">{section.heading}</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-6 mt-12 tracking-tight">{section.heading}</h2>
               {section.body.split('\n\n').map((paragraph, pIdx) => (
-                <p key={pIdx} className="text-neutral-700 leading-relaxed mb-4">
+                <p key={pIdx} className="text-neutral-600 leading-relaxed mb-6">
                   {paragraph}
                 </p>
               ))}
@@ -251,15 +251,15 @@ const CaseStudyDetail = () => {
         </div>
 
         {/* Tech Stack */}
-        <div className="mb-16 p-8 bg-card border border-border rounded-lg">
-          <h3 className="text-sm font-semibold text-neutral-950 mb-4">
+        <div className="mb-16 p-6 sm:p-8 bg-card border border-border rounded-lg max-w-4xl mx-auto">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-950 mb-4">
             Technology Stack
           </h3>
           <div className="flex flex-wrap gap-2">
             {study.techStack.map((tech, idx) => (
               <span
                 key={idx}
-                className="text-sm text-neutral-700 bg-neutral-100 border border-neutral-200 px-3 py-1.5 rounded"
+                className="text-xs sm:text-sm text-neutral-600 border border-neutral-200 px-2 sm:px-3 py-1 rounded"
               >
                 {tech}
               </span>
@@ -268,27 +268,30 @@ const CaseStudyDetail = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center p-12 bg-card border border-border rounded-lg hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all">
-          <h3 className="h3 mb-4 text-neutral-950">Interested in Similar Solutions?</h3>
-          <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+        <div className="text-center p-8 sm:p-12 bg-card border border-border rounded-lg max-w-4xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-neutral-950 tracking-tight">Interested in Similar Solutions?</h3>
+          <p className="text-sm sm:text-base text-neutral-600 leading-relaxed mb-6 max-w-2xl mx-auto px-4">
             The expertise demonstrated in this project is available for consulting
             engagements and custom development.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <a
               href="https://calendly.com/contact-kodexstudio/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded hover:bg-accent-hover transition-colors-smooth"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded hover:bg-accent-hover transition-colors-smooth"
             >
               Schedule Consultation
             </a>
-            <Link
-              to="/showcase"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-neutral-950 font-medium rounded hover:border-cyan-400/50 hover:bg-card transition-all"
+            <a
+              href={study.cta.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border border-border text-neutral-950 font-medium rounded hover:border-cyan-400/50 hover:bg-card transition-all"
             >
-              View Case Studies
-            </Link>
+              View Demo
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </Container>
