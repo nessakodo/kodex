@@ -11,6 +11,7 @@ import Mission from "./pages/Mission";
 import Services from "./pages/Services";
 import Insights from "./pages/Insights";
 import Showcase from "./pages/Showcase";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
 import Security from "./pages/Security";
 import Careers from "./pages/Careers";
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/showcase" element={<Showcase />} />
+              <Route path="/showcase/:slug" element={<CaseStudyDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/security" element={<Security />} />
               <Route path="/careers" element={<Careers />} />

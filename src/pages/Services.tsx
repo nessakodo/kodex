@@ -86,9 +86,11 @@ const Services = () => {
   return (
     <div className="py-24">
       <Container>
-        <header className="mb-16 max-w-2xl">
-          <p className="text-overline mb-2">SERVICES</p>
-          <h1 className="h1 mb-6">Security Capabilities</h1>
+        <header className="mb-16 max-w-2xl text-center mx-auto animate-fade-in">
+          <p className="text-overline mb-4">SERVICES</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Security <span className="gradient-text">Capabilities</span>
+          </h1>
           <p className="text-lead">
             Comprehensive security services designed for organizations that demand
             excellence in protecting their digital infrastructure.

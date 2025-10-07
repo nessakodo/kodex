@@ -5,7 +5,7 @@ const caseStudies = [
   {
     slug: "cryptiq",
     category: "Cryptography",
-    title: "Post-Quantum Encryption Suite",
+    title: "CRYPTIQ — Post-Quantum Encryption Suite",
     client: "Financial Infrastructure Provider",
     metrics: [
       { value: "99%", label: "Risk Reduction" },
@@ -21,7 +21,7 @@ const caseStudies = [
   {
     slug: "phishguard",
     category: "Threat Detection",
-    title: "Automated Threat Detection",
+    title: "PHISHGUARD — AI-Powered Phishing Detection",
     client: "Regional Healthcare System",
     metrics: [
       { value: "82%", label: "Attack Reduction" },
@@ -37,7 +37,7 @@ const caseStudies = [
   {
     slug: "caresense",
     category: "Healthcare",
-    title: "AI-Powered Healthcare Triage",
+    title: "CARESENSE — Ethical AI Healthcare Triage",
     client: "Multi-site Urgent Care Network",
     metrics: [
       { value: "63%", label: "Faster Patient Intake" },
@@ -50,15 +50,33 @@ const caseStudies = [
     problem:
       "4-hour average patient wait times with inconsistent triage quality across multiple care sites.",
   },
+  {
+    slug: "verdant",
+    category: "Environmental AI / IoT",
+    title: "VERDANT — Living Sensor Drone Platform",
+    client: "Personal R&D Project",
+    metrics: [
+      { value: "4km", label: "LoRa Mesh Range" },
+      { value: "12+", label: "Sensor Modules" },
+      { value: "100%", label: "Edge Encryption Coverage" },
+    ],
+    summary:
+      "Modular drone system blending bioelectric sensing, LoRa mesh networking, and edge AI for environmental awareness and data sovereignty.",
+    techStack: ["ESP32", "LoRa SX1276", "TensorFlow Lite", "Arduino", "Python"],
+    problem:
+      "Environmental monitoring systems are often centralized, expensive, and insecure. VERDANT provides a decentralized, encrypted, and bio-integrated alternative.",
+  },
 ];
 
 const Showcase = () => {
   return (
     <div className="py-24">
       <Container>
-        <header className="mb-16 max-w-2xl">
-          <p className="text-overline mb-2">SHOWCASE</p>
-          <h1 className="h1 mb-6">Case Studies</h1>
+        <header className="mb-16 max-w-2xl text-center mx-auto animate-fade-in">
+          <p className="text-overline mb-4">SHOWCASE</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Case <span className="gradient-text">Studies</span>
+          </h1>
           <p className="text-lead">
             Production systems built for organizations that demand excellence in
             security and reliability.

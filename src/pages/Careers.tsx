@@ -36,7 +36,7 @@ const Careers = () => {
         <Container size="narrow">
           <div className="text-center mb-16 animate-fade-in">
             <p className="text-overline mb-4">CAREERS</p>
-            <h1 className="text-display mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Join Our <span className="gradient-text">Team</span>
             </h1>
             <p className="text-lead max-w-2xl mx-auto">

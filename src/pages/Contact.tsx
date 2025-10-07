@@ -47,9 +47,11 @@ const Contact = () => {
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 lg:items-start">
           <div>
-            <header className="mb-8">
-              <p className="text-overline mb-2">CONTACT</p>
-              <h1 className="h1 mb-6">Let's Discuss Your Security Needs</h1>
+            <header className="mb-8 animate-fade-in">
+              <p className="text-overline mb-4">CONTACT</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Let's Discuss Your Security <span className="gradient-text">Needs</span>
+              </h1>
               <p className="text-lead">
                 Whether you're starting a new project or need to strengthen
                 existing systems, we're here to help.

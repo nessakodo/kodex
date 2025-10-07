@@ -4,10 +4,12 @@ const Mission = () => {
   return (
     <div className="py-24">
       <Container size="narrow">
-        <header className="mb-12">
-          <p className="text-overline mb-2">MISSION</p>
-          <h1 className="h1 mb-6">Building Security at Scale</h1>
-          <p className="text-lead">
+        <header className="mb-12 text-center animate-fade-in">
+          <p className="text-overline mb-4">MISSION</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Building Security at <span className="gradient-text">Scale</span>
+          </h1>
+          <p className="text-lead max-w-2xl mx-auto">
             KODEX STUDIO exists to help organizations build and operate secure
             systems that protect what matters most.
           </p>

@@ -13,7 +13,7 @@ const Terms = () => {
         <Container size="narrow">
           <div className="mb-16 animate-fade-in">
             <p className="text-overline mb-4">LEGAL</p>
-            <h1 className="text-display mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Terms of <span className="gradient-text">Service</span>
             </h1>
             <p className="text-neutral-600">Last updated: January 2025</p>

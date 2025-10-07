@@ -32,10 +32,12 @@ const Security = () => {
   return (
     <div className="py-24">
       <Container size="narrow">
-        <header className="mb-16">
-          <p className="text-overline mb-2">SECURITY</p>
-          <h1 className="h1 mb-6">Security & Privacy</h1>
-          <p className="text-lead">
+        <header className="mb-16 text-center animate-fade-in">
+          <p className="text-overline mb-4">SECURITY</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Security & <span className="gradient-text">Privacy</span>
+          </h1>
+          <p className="text-lead max-w-2xl mx-auto">
             Our commitment to protecting client data and maintaining the highest
             security standards.
           </p>

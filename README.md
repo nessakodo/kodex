@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# KODEX STUDIO
 
-## Project info
+## Overview
 
-**URL**: https://lovable.dev/projects/3f6a9cf8-06fc-4a69-a63c-6fead3e7200c
+KODEX STUDIO is a professional website showcasing security infrastructure and software engineering services for modern organizations. The site provides comprehensive information about security architecture, application security, and operations services for clients who require production-grade systems.
 
-## How can I edit this code?
+## What This Site Offers
 
-There are several ways of editing your application.
+### Services
+- **Security Architecture**: Comprehensive security design and infrastructure planning
+- **Application Security**: Development of secure, production-ready applications
+- **Operations**: Ongoing maintenance and security operations for production systems
 
-**Use Lovable**
+### Content Sections
+- **Hero Section**: Introduction to KODEX STUDIO's core mission and value proposition
+- **Service Grid**: Detailed breakdown of services offered
+- **Case Studies**: Preview of security projects and implementations
+- **Trust Indicators**: Client testimonials and security certifications
+- **Contact Form**: Professional contact interface for client inquiries
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3f6a9cf8-06fc-4a69-a63c-6fead3e7200c) and start prompting.
+### Additional Pages
+- About/Mission: Company philosophy and approach
+- Services: Detailed service descriptions
+- Showcase: Portfolio of work and case studies
+- Security: Security practices and standards
+- Insights: Industry knowledge and updates
+- Careers: Employment opportunities
+- Contact: Multiple channels for reaching the team
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+This project is built with modern web technologies:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Vite**: Fast build tool and development server
+- **TypeScript**: Type-safe JavaScript development
+- **React 18**: Modern React with hooks and concurrent features
+- **shadcn/ui**: High-quality, accessible component library built on Radix UI
+- **Tailwind CSS**: Utility-first CSS framework
+- **React Router**: Client-side routing
+- **React Hook Form**: Efficient form handling with validation
+- **TanStack Query**: Powerful data fetching and state management
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
+## Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/
+│   ├── layout/        # Layout components (Header, Footer, Container)
+│   ├── modules/       # Feature modules (Hero, ServiceGrid, etc.)
+│   └── ui/            # Reusable UI components (shadcn/ui)
+├── pages/             # Route pages
+├── hooks/             # Custom React hooks
+└── lib/               # Utilities and helpers
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Build the project for production:
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The build output will be in the `dist/` directory, ready for deployment to any static hosting service.
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3f6a9cf8-06fc-4a69-a63c-6fead3e7200c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Private - All rights reserved
