@@ -12,10 +12,11 @@ const Contact = () => {
     company: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast.error("Please fill in all required fields");
@@ -29,8 +30,39 @@ const Contact = () => {
       return;
     }
 
-    toast.success("Message sent successfully. We'll be in touch soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "ba3e7ed4-d765-414d-8960-b4dcb45ca368",
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || "Not provided",
+          message: formData.message,
+          subject: `New Contact Form Submission from ${formData.name}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent successfully. We'll be in touch soon.");
+        setFormData({ name: "", email: "", company: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again or email us directly.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again or email us directly.");
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -170,8 +202,8 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
+              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
 
               <p className="text-xs text-neutral-500 text-center">
