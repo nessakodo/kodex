@@ -34,7 +34,7 @@ export function Hero() {
             We build and secure production systems for organizations that can't
             afford compromise. Enterprise-grade solutions powered by cutting-edge technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Button asChild size="lg" className="group hidden sm:inline-flex">
               <Link to="/contact">
                 Get Started
