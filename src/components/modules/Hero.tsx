@@ -14,11 +14,11 @@ export function Hero() {
             Security Infrastructure for{" "}
             <span className="hero-gradient-text">Modern Software</span>
           </h1>
-          <p className="text-lead mb-12 mx-auto max-w-2xl">
+          <p className="text-lead mb-8 sm:mb-12 mx-auto max-w-2xl">
             We build and secure production systems for organizations that can't
             afford compromise. Enterprise-grade solutions powered by cutting-edge technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-8 sm:px-0">
             <Link
               to="/contact"
               className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden hidden sm:inline-flex"
@@ -45,7 +45,7 @@ export function Hero() {
             </Link>
             <Link
               to="/showcase"
-              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative w-auto sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Gradient background overlay */}
               <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />

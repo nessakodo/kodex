@@ -224,7 +224,7 @@ const CaseStudyDetail = () => {
         </header>
 
         {/* Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 p-6 sm:p-8 bg-card border border-border rounded-lg max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 p-6 sm:p-8 bg-black/30 border border-neutral-200 rounded-xl max-w-4xl mx-auto">
           {study.metrics.map((metric, idx) => (
             <div key={idx} className="text-center">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-2">
@@ -250,7 +250,7 @@ const CaseStudyDetail = () => {
         </div>
 
         {/* Tech Stack */}
-        <div className="mb-16 p-6 sm:p-8 bg-card border border-border rounded-lg max-w-4xl mx-auto">
+        <div className="mb-16 p-6 sm:p-8 bg-black/30 border border-neutral-200 rounded-xl max-w-4xl mx-auto">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-950 mb-4">
             Technology Stack
           </h3>
@@ -267,7 +267,7 @@ const CaseStudyDetail = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center p-8 sm:p-12 bg-card border border-border rounded-lg max-w-4xl mx-auto">
+        <div className="text-center p-8 sm:p-12 bg-black/30 border border-neutral-200 rounded-xl max-w-4xl mx-auto">
           <h3 className="text-xl sm:text-2xl font-bold mb-4 text-neutral-950 tracking-tight">Interested in Similar Solutions?</h3>
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed mb-6 max-w-2xl mx-auto px-4">
             The expertise demonstrated in this project is available for consulting

@@ -217,7 +217,7 @@ const Contact = () => {
                   value={formData.category}
                   onChange={handleChange}
                   required
-                  className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="w-full h-10 px-3 rounded-md border border-neutral-200 bg-black/30 text-neutral-950 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2"
                 >
                   <option value="">Select inquiry type...</option>
                   <option value="Security Consulting">Security Consulting & Architecture</option>

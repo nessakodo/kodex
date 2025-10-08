@@ -97,7 +97,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-black/95 backdrop-blur-md z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-x-0 top-20 bottom-0 bg-black z-[60] animate-slide-down">
           <div className="flex flex-col items-center px-6 py-8 gap-8">
             {navigation.map((item) => {
               const isActive = location.pathname === item.href;

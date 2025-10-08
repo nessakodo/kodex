@@ -34,8 +34,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-black relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 relative">
+    <footer className="bg-black relative overflow-hidden border-t border-neutral-200/30">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 relative z-10">
         {/* Mobile: Single column centered */}
         <div className="md:hidden space-y-10">
           {/* Brand */}
@@ -130,12 +130,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Bottom bar */}
-          <div className="pt-6 border-t border-neutral-200 text-center">
-            <p className="text-xs text-neutral-500">
-              © 2025 KODEX STUDIO · Engineered for Excellence
-            </p>
-          </div>
         </div>
 
         {/* Desktop: Multi-column layout */}
@@ -231,11 +225,15 @@ export function Footer() {
             })}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-neutral-200">
-            <p className="text-sm text-neutral-500">
-              © 2025 KODEX STUDIO · Engineered for Excellence
-            </p>
-          </div>
+        </div>
+      </div>
+
+      {/* Full-width copyright divider */}
+      <div className="border-t border-neutral-200/30">
+        <div className="mx-auto max-w-7xl px-6 py-6 md:py-8">
+          <p className="text-xs md:text-sm text-neutral-500 text-center md:text-left">
+            © 2025 KODEX STUDIO · Engineered for Excellence
+          </p>
         </div>
       </div>
     </footer>

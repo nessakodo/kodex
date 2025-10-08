@@ -295,28 +295,28 @@ const Insights = () => {
                           onClick={() => setCurrentPage(page)}
                           className={`group relative w-11 h-11 flex-shrink-0 rounded-lg text-sm font-semibold transition-all duration-300 overflow-hidden ${
                             currentPage === page
-                              ? "border border-neutral-200 bg-gradient-to-br from-sky-blue/10 to-aqua-mint/10 text-neutral-950"
+                              ? "border-transparent bg-black/30 text-neutral-950 shadow-2xl"
                               : "border border-neutral-200 bg-black/30 text-neutral-950 hover:border-transparent hover:shadow-2xl"
                           }`}
                         >
-                          {currentPage !== page && (
-                            <>
-                              {/* Gradient background overlay */}
-                              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
+                          {/* Gradient background overlay */}
+                          <span className={`absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 transition-opacity duration-300 pointer-events-none rounded-lg ${
+                            currentPage === page ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                          }`} />
 
-                              {/* Animated border gradient on hover */}
-                              <span
-                                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                                style={{
-                                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
-                                  padding: '1px',
-                                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                                  WebkitMaskComposite: 'xor',
-                                  maskComposite: 'exclude',
-                                }}
-                              />
-                            </>
-                          )}
+                          {/* Animated border gradient on hover */}
+                          <span
+                            className={`absolute inset-0 rounded-lg transition-opacity duration-300 pointer-events-none ${
+                              currentPage === page ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                            }`}
+                            style={{
+                              background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
+                              padding: '1px',
+                              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                              WebkitMaskComposite: 'xor',
+                              maskComposite: 'exclude',
+                            }}
+                          />
                           <span className="relative z-10">{page}</span>
                         </button>
                       ))}
