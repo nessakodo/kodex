@@ -263,7 +263,7 @@
   @keyframes slide-down {
     from {
       opacity: 0;
-      transform: translateY(-100%);
+      transform: translateY(-20px);
     }
     to {
       opacity: 1;
@@ -272,7 +272,7 @@
   }
 
   .animate-slide-down {
-    animation: slide-down 0.2s ease-out forwards;
+    animation: slide-down 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 }
 
