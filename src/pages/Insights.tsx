@@ -60,7 +60,7 @@ const Insights = () => {
   const currentArticles = articles.slice(startIndex, endIndex);
 
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container>
         <header className="mb-16 max-w-2xl text-center mx-auto animate-fade-in">
           <p className="text-overline mb-4">INSIGHTS</p>

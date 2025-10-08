@@ -184,7 +184,7 @@ const CaseStudyDetail = () => {
 
   if (!study) {
     return (
-      <div className="py-24">
+      <div className="pt-16 pb-24">
         <Container>
           <div className="text-center">
             <h1 className="h1 mb-6">Case Study Not Found</h1>
@@ -202,7 +202,7 @@ const CaseStudyDetail = () => {
   }
 
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container>
         <Link
           to="/showcase"
@@ -214,11 +214,10 @@ const CaseStudyDetail = () => {
 
         <header className="mb-16 max-w-4xl text-center mx-auto animate-fade-in">
           <p className="text-overline mb-4">{study.category}</p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
-            {study.title.split('—')[0]}
-            <span className="gradient-text">—{study.title.split('—')[1]}</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight tracking-tight text-neutral-950">
+            {study.title}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed mb-8 px-4">
+          <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mb-8 px-4">
             {study.tagline}
           </p>
           <p className="text-neutral-600 leading-relaxed px-4">{study.summary}</p>
@@ -275,19 +274,17 @@ const CaseStudyDetail = () => {
             engagements and custom development.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-            <a
-              href="https://calendly.com/contact-kodexstudio/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded hover:bg-accent-hover transition-colors-smooth"
+            <Link
+              to="/contact"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent-hover transition-colors-smooth"
             >
-              Schedule Consultation
-            </a>
+              Contact Us
+            </Link>
             <a
               href={study.cta.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border border-border text-neutral-950 font-medium rounded hover:border-cyan-400/50 hover:bg-card transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-border text-neutral-950 text-sm font-medium rounded-md hover:border-cyan-400/50 hover:bg-card transition-all"
             >
               View Demo
               <ExternalLink className="w-4 h-4" />

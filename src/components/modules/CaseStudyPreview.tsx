@@ -74,7 +74,7 @@ export function CaseStudyPreview() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {caseStudies.map((study, index) => (
             <Link
               key={study.slug}
@@ -94,12 +94,12 @@ export function CaseStudyPreview() {
                 </span>
               </div>
 
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-neutral-950 group-hover:gradient-accent-text transition-all">
+              <div className="p-6 lg:p-8">
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-neutral-950 group-hover:gradient-accent-text transition-all">
                   {study.title}
                 </h3>
 
-                <div className="flex gap-8 mb-6">
+                <div className="flex gap-6 lg:gap-8 mb-6">
                   {study.metrics.map((metric) => (
                     <div key={metric.label}>
                       <div className="text-2xl font-bold gradient-text mb-1">

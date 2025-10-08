@@ -77,7 +77,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container>
         <header className="mb-16 max-w-2xl text-center mx-auto animate-fade-in">
           <p className="text-overline mb-4">SERVICES</p>
@@ -90,11 +90,11 @@ const Services = () => {
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, idx) => (
             <article
               key={idx}
-              className="border border-border rounded-lg p-8 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
+              className="border border-border rounded-lg p-6 lg:p-8 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
               <h2 className="h3 mb-4">{service.title}</h2>
               <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
@@ -112,12 +112,12 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-card/50 border border-border rounded-lg p-8">
-          <h2 className="h3 mb-4">Engagement Model</h2>
-          <p className="text-muted-foreground mb-6 leading-relaxed">
+        <div className="mt-16 bg-card/50 border border-border rounded-lg p-6 lg:p-8">
+          <h2 className="h3 mb-4 text-center lg:text-left">Engagement Model</h2>
+          <p className="text-muted-foreground mb-6 leading-relaxed text-center lg:text-left">
             We offer flexible engagement models to meet your organization's needs:
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <div>
               <h3 className="font-semibold text-foreground mb-2">Project-Based</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

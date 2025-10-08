@@ -10,6 +10,7 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
+    category: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,8 +45,9 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           company: formData.company || "Not provided",
+          category: formData.category || "General Inquiry",
           message: formData.message,
-          subject: `New Contact Form Submission from ${formData.name}`,
+          subject: `New Contact Form: ${formData.category || "General Inquiry"} - ${formData.name}`,
         }),
       });
 
@@ -53,7 +55,7 @@ const Contact = () => {
 
       if (result.success) {
         toast.success("Message sent successfully. We'll be in touch soon.");
-        setFormData({ name: "", email: "", company: "", message: "" });
+        setFormData({ name: "", email: "", company: "", category: "", message: "" });
       } else {
         toast.error("Failed to send message. Please try again or email us directly.");
       }
@@ -66,7 +68,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({
       ...formData,
@@ -75,62 +77,81 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 lg:items-start">
-          <div>
-            <header className="mb-8 animate-fade-in">
-              <p className="text-overline mb-4">CONTACT</p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Let's Discuss Your Security <span className="gradient-text">Needs</span>
-              </h1>
-              <p className="text-lead">
-                Whether you're starting a new project or need to strengthen
-                existing systems, we're here to help.
-              </p>
-            </header>
+        <header className="mb-12 max-w-2xl text-center mx-auto animate-fade-in">
+          <p className="text-overline mb-4">CONTACT</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Let's Discuss Your Security <span className="gradient-text">Needs</span>
+          </h1>
+          <p className="text-lead">
+            Whether you're starting a new project or need to strengthen
+            existing systems, we're here to help.
+          </p>
+        </header>
 
-            <div className="space-y-6">
-              <div>
-                <h2 className="h3 mb-3">What to Expect</h2>
-                <ul className="space-y-3">
-                  <li className="flex items-start text-sm text-muted-foreground">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
-                    <span className="leading-relaxed">
-                      <strong className="text-foreground font-medium">Initial consultation:</strong> 30-minute
-                      discussion to understand your needs and challenges.
-                    </span>
-                  </li>
-                  <li className="flex items-start text-sm text-muted-foreground">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
-                    <span className="leading-relaxed">
-                      <strong className="text-foreground font-medium">Scoping document:</strong> Detailed proposal
-                      with approach, timeline, and investment required.
-                    </span>
-                  </li>
-                  <li className="flex items-start text-sm text-muted-foreground">
-                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
-                    <span className="leading-relaxed">
-                      <strong className="text-foreground font-medium">Clear communication:</strong> No sales
-                      pressure, just honest assessment of how we can help.
-                    </span>
-                  </li>
-                </ul>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-xl font-bold mb-4 text-neutral-950">Enterprise Security Engineering</h2>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                Production-grade security solutions protecting billions in daily transactions across financial services, healthcare systems, and critical infrastructure.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <div className="border-l-2 border-cyan-400 pl-4">
+                <h3 className="text-sm font-semibold text-neutral-950 mb-1.5">
+                  Post-Quantum Cryptography
+                </h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  NIST-approved quantum-resistant algorithms, hybrid key exchange, sub-40ms encryption at scale
+                </p>
               </div>
 
-              <div className="bg-card/50 border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-2">Response Time</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  We respond to all inquiries within 24 hours during business
-                  days. For urgent security concerns, please indicate in your
-                  message.
+              <div className="border-l-2 border-cyan-400 pl-4">
+                <h3 className="text-sm font-semibold text-neutral-950 mb-1.5">
+                  AI Security Automation
+                </h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  Intelligent threat detection, SOC automation, 82% attack reduction through ML-driven analysis
+                </p>
+              </div>
+
+              <div className="border-l-2 border-cyan-400 pl-4">
+                <h3 className="text-sm font-semibold text-neutral-950 mb-1.5">
+                  Compliance & Architecture
+                </h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  HIPAA, SOC 2, zero-trust design, cloud security hardening, regulatory compliance implementation
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-cyan-400/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-neutral-950 mb-1">24-Hour Response</h3>
+                  <p className="text-sm text-neutral-600 leading-relaxed">
+                    All inquiries receive expert assessment within one business day. Security incidents prioritized for immediate triage.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs text-neutral-500 leading-relaxed">
+                  Trusted by financial services, healthcare organizations, and technology companies requiring uncompromising security standards.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="lg:pt-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border rounded-lg p-6 lg:p-8">
               <div className="space-y-2">
                 <label
                   htmlFor="name"
@@ -186,6 +207,29 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <label
+                  htmlFor="category"
+                  className="block text-sm font-medium text-foreground"
+                >
+                  Inquiry Type *
+                </label>
+                <select
+                  id="category"
+                  value={formData.category}
+                  onChange={handleChange}
+                  required
+                  className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="">Select inquiry type...</option>
+                  <option value="Security Consulting">Security Consulting & Architecture</option>
+                  <option value="Threat Detection">AI/ML Security & Threat Detection</option>
+                  <option value="Compliance">Compliance & Regulatory (HIPAA, SOC 2)</option>
+                  <option value="Custom Development">Custom Development Project</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <label
                   htmlFor="message"
                   className="block text-sm font-medium text-foreground"
                 >
@@ -196,9 +240,9 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
+                  rows={5}
                   className="w-full resize-none"
-                  placeholder="Tell us about your security needs and challenges..."
+                  placeholder="Tell us about your project requirements and challenges..."
                 />
               </div>
 

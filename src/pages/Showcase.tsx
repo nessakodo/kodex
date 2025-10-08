@@ -70,7 +70,7 @@ const caseStudies = [
 
 const Showcase = () => {
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container>
         <header className="mb-16 max-w-2xl text-center mx-auto animate-fade-in">
           <p className="text-overline mb-4">SHOWCASE</p>
@@ -83,13 +83,13 @@ const Showcase = () => {
           </p>
         </header>
 
-        <div className="space-y-8">
+        <div className="space-y-6 lg:space-y-8">
           {caseStudies.map((study) => (
             <article
               key={study.slug}
-              className="border border-border rounded-lg p-8 lg:p-12 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
+              className="border border-border rounded-lg p-6 lg:p-12 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
             >
-              <div className="grid lg:grid-cols-3 gap-8">
+              <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
                 <div className="lg:col-span-2">
                   <header className="mb-6">
                     <span className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-3 py-1 rounded mb-4">

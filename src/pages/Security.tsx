@@ -30,7 +30,7 @@ const securityPractices = [
 
 const Security = () => {
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container size="narrow">
         <header className="mb-16 text-center animate-fade-in">
           <p className="text-overline mb-4">SECURITY</p>

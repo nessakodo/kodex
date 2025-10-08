@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 
 const Mission = () => {
   return (
-    <div className="py-24">
+    <div className="pt-16 pb-24">
       <Container size="narrow">
         <header className="mb-12 text-center animate-fade-in">
           <p className="text-overline mb-4">MISSION</p>
