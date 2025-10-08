@@ -77,8 +77,10 @@ const Insights = () => {
           {currentArticles.map((article) => (
             <article
               key={article.id}
-              className="group border border-border rounded-lg overflow-hidden bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all"
+              className="group relative border border-neutral-200 rounded-xl overflow-hidden bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300"
             >
+              {/* Gradient background overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
               {article.coverImage && (
                 <div className="aspect-video overflow-hidden bg-neutral-100">
                   <img
@@ -89,7 +91,7 @@ const Insights = () => {
                 </div>
               )}
 
-              <div className="p-6">
+              <div className="relative p-6 z-20">
                 <div className="flex items-center gap-2 mb-4">
                   {article.tags.slice(0, 2).map((tag) => (
                     <span

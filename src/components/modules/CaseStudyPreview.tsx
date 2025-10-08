@@ -67,7 +67,7 @@ export function CaseStudyPreview() {
       <Container>
         <header className="text-center mb-16 animate-fade-in">
           <h2 className="h2 mb-4">
-            <span className="gradient-accent-text">SELECTED WORK</span>
+            <span className="gradient-accent-text">FEATURED PROJECTS</span>
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
             Real-world deployments solving critical security challenges for enterprise clients.
@@ -139,7 +139,7 @@ export function CaseStudyPreview() {
         <div className="text-center">
           <Button asChild size="lg" variant="outline">
             <Link to="/showcase">
-              View All Showcase
+              View All Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

@@ -87,9 +87,11 @@ const Showcase = () => {
           {caseStudies.map((study) => (
             <article
               key={study.slug}
-              className="border border-border rounded-lg p-6 lg:p-12 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
+              className="relative border border-neutral-200 rounded-xl p-6 lg:p-12 bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
             >
-              <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+              {/* Gradient background overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative grid lg:grid-cols-3 gap-6 lg:gap-8">
                 <div className="lg:col-span-2">
                   <header className="mb-6">
                     <span className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-3 py-1 rounded mb-4">

@@ -1,9 +1,7 @@
 import { Container } from "@/components/layout/Container";
-import { Shield, Lock, Server, Code, Database, Cloud } from "lucide-react";
 
 const services = [
   {
-    icon: Shield,
     title: "Security Architecture",
     description:
       "Threat modeling, defense-in-depth design, and zero-trust implementation for cloud-native systems.",
@@ -14,7 +12,6 @@ const services = [
     ],
   },
   {
-    icon: Lock,
     title: "Cryptography & Identity",
     description:
       "Post-quantum encryption, key management systems, and enterprise IAM solutions.",
@@ -25,7 +22,6 @@ const services = [
     ],
   },
   {
-    icon: Server,
     title: "Infrastructure Security",
     description:
       "Kubernetes hardening, cloud security posture management, and infrastructure as code security.",
@@ -36,7 +32,6 @@ const services = [
     ],
   },
   {
-    icon: Code,
     title: "Application Security",
     description:
       "Secure SDLC implementation, code review, and automated security testing pipelines.",
@@ -47,7 +42,6 @@ const services = [
     ],
   },
   {
-    icon: Database,
     title: "Data Protection",
     description:
       "Database security, data classification, encryption at rest and in transit, DLP implementation.",
@@ -58,7 +52,6 @@ const services = [
     ],
   },
   {
-    icon: Cloud,
     title: "Compliance & Governance",
     description:
       "SOC 2, ISO 27001, HIPAA, and PCI-DSS compliance auditing and implementation support.",
@@ -76,10 +69,10 @@ export function ServiceGrid() {
       <Container>
         <header className="text-center mb-16 animate-fade-in">
           <h2 className="h2 mb-4">
-            <span className="gradient-accent-text">CAPABILITIES</span>
+            <span className="gradient-accent-text">SPECIALTIES</span>
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
-            Three core competencies built on two decades of combined experience in cybersecurity and software engineering.
+            Enterprise security capabilities built on deep technical expertise and proven production experience.
           </p>
         </header>
 
@@ -87,36 +80,30 @@ export function ServiceGrid() {
           {services.map((service, index) => (
             <article
               key={service.title}
-              className="group relative bg-card border border-neutral-200 rounded-xl p-8 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1"
+              className="group relative bg-card border border-neutral-200 rounded-lg p-6 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
-              
-              <div className="relative">
-                <div className="inline-flex items-center justify-center w-14 h-14 mb-6 rounded-lg bg-gradient-accent">
-                  <service.icon className="h-7 w-7 text-neutral-950" strokeWidth={1.5} />
-                </div>
-                
-                <h3 className="h3 mb-3 text-neutral-950 group-hover:text-cyan-400 transition-colors">
+              <div className="border-l-2 border-cyan-400 pl-4 mb-4">
+                <h3 className="text-lg font-bold text-neutral-950 mb-2">
                   {service.title}
                 </h3>
-                
-                <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {service.deliverables.map((item) => (
-                    <li
-                      key={item}
-                      className="text-sm text-neutral-500 flex items-center gap-2"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
+
+              <p className="text-sm text-neutral-600 mb-5 leading-relaxed">
+                {service.description}
+              </p>
+
+              <ul className="space-y-2">
+                {service.deliverables.map((item) => (
+                  <li
+                    key={item}
+                    className="text-sm text-neutral-500 flex items-start gap-2"
+                  >
+                    <div className="w-1 h-1 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>

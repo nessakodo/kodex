@@ -94,20 +94,29 @@ const Services = () => {
           {services.map((service, idx) => (
             <article
               key={idx}
-              className="border border-border rounded-lg p-6 lg:p-8 bg-card hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all group"
+              className="relative border border-neutral-200 rounded-xl p-8 bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
             >
-              <h2 className="h3 mb-4">{service.title}</h2>
-              <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <ul className="space-y-2">
-                {service.offerings.map((offering, i) => (
-                  <li key={i} className="flex items-start text-sm text-neutral-600">
-                    <span className="inline-block w-1 h-1 rounded-full bg-neutral-400 mt-2 mr-3 flex-shrink-0" />
-                    <span className="leading-relaxed">{offering}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Gradient background overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="relative">
+                <h2 className="text-xl font-bold text-neutral-950 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                  {service.title}
+                </h2>
+
+                <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="space-y-2.5 pt-6 border-t border-neutral-200/50">
+                  {service.offerings.map((offering, i) => (
+                    <div key={i} className="flex items-start text-sm text-neutral-600 leading-relaxed">
+                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
+                      <span>{offering}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </article>
           ))}
         </div>
