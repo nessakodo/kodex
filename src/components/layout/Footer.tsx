@@ -41,10 +41,11 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold tracking-tight">
-                <span className="text-neutral-950">KODEX</span>
-                <span className="gradient-accent-text ml-1">STUDIO</span>
-              </span>
+              <img
+                src="/logo-footer.svg"
+                alt="KODEX STUDIO"
+                className="h-24 w-auto mx-auto"
+              />
             </Link>
             <p className="text-sm text-neutral-500 max-w-xs mx-auto leading-relaxed">
               Security infrastructure for modern software deployment.
@@ -82,7 +83,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                      className="text-xs text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                     >
                       {link.name}
                     </Link>
@@ -101,7 +102,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                      className="text-xs text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                     >
                       {link.name}
                     </Link>
@@ -120,7 +121,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                      className="text-xs text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                     >
                       {link.name}
                     </Link>
@@ -133,14 +134,15 @@ export function Footer() {
         </div>
 
         {/* Desktop: Multi-column layout */}
-        <div className="hidden md:grid grid-cols-4 gap-8">
+        <div className="hidden md:grid grid-cols-4 gap-8 -ml-6">
           {/* Brand */}
           <div className="col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <span className="text-xl font-bold tracking-tight">
-                <span className="text-neutral-950">KODEX</span>
-                <span className="gradient-accent-text ml-1">STUDIO</span>
-              </span>
+            <Link to="/" className="block mb-4 -ml-7">
+              <img
+                src="/logo-footer.svg"
+                alt="KODEX STUDIO"
+                className="h-24 w-auto"
+              />
             </Link>
             <p className="text-sm text-neutral-500 max-w-xs leading-relaxed">
               Security infrastructure for modern software deployment.
@@ -157,7 +159,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    className="text-sm text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                   >
                     {link.name}
                   </Link>
@@ -176,7 +178,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    className="text-sm text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                   >
                     {link.name}
                   </Link>
@@ -195,7 +197,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    className="text-sm text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                   >
                     {link.name}
                   </Link>

@@ -9,6 +9,9 @@ const navigation = [
   { name: "CONTACT", href: "/contact" },
 ];
 
+// Toggle between logo and text
+const USE_LOGO = false; // Set to true to use logo image, false for text
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -43,10 +46,17 @@ export function Header() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 h-20">
         <Link to="/" className="flex items-center group">
-          <span className="text-2xl font-bold tracking-tight">
-            <span className="text-neutral-950">KODEX</span>
-            <span className="text-sky-blue ml-1">STUDIO</span>
-          </span>
+          {USE_LOGO ? (
+            <img
+              src="/logo-header.svg"
+              alt="KODEX STUDIO"
+              className="h-8 w-auto"
+            />
+          ) : (
+            <span className="text-2xl font-bold tracking-tight">
+              <span className="gradient-accent-text">KODEX STUDIO</span>
+            </span>
+          )}
         </Link>
 
         {/* Desktop navigation */}
