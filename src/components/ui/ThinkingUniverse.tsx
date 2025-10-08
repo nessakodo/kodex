@@ -164,7 +164,7 @@ export default function ThinkingUniverse() {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none">
+    <div className="fixed inset-0 pointer-events-none z-0">
       <div ref={mountRef} className="absolute inset-0" />
     </div>
   );
