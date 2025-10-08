@@ -38,10 +38,113 @@ export function Footer() {
     <footer className="bg-neutral-50 border-t border-neutral-200 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
       
-      <div className="mx-auto max-w-7xl px-6 py-16 relative">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 relative">
+        {/* Mobile: Single column centered */}
+        <div className="md:hidden space-y-10">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="text-center">
+            <Link to="/" className="inline-block mb-4">
+              <span className="text-2xl font-bold tracking-tight">
+                <span className="text-neutral-950">KODEX</span>
+                <span className="gradient-accent-text ml-1">STUDIO</span>
+              </span>
+            </Link>
+            <p className="text-sm text-neutral-500 max-w-xs mx-auto leading-relaxed">
+              Security infrastructure for modern software deployment.
+            </p>
+          </div>
+
+          {/* Social links */}
+          <div className="flex gap-6 justify-center">
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                  aria-label={item.name}
+                >
+                  <Icon className="h-6 w-6" strokeWidth={1.5} />
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Links in grid */}
+          <div className="grid grid-cols-3 gap-6 text-center max-w-md mx-auto">
+            {/* Product */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-800 mb-3">
+                PRODUCT
+              </h3>
+              <ul className="space-y-2">
+                {footerLinks.product.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-800 mb-3">
+                COMPANY
+              </h3>
+              <ul className="space-y-2">
+                {footerLinks.company.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-800 mb-3">
+                LEGAL
+              </h3>
+              <ul className="space-y-2">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-xs text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+          <div className="pt-6 border-t border-neutral-200 text-center">
+            <p className="text-xs text-neutral-500">
+              © 2025 KODEX STUDIO · Engineered for Excellence
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop: Multi-column layout */}
+        <div className="hidden md:grid grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="text-xl font-bold tracking-tight">
                 <span className="text-neutral-950">KODEX</span>
@@ -111,30 +214,31 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Social links */}
-        <div className="mt-12 flex gap-6">
-          {socialLinks.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
-                aria-label={item.name}
-              >
-                <Icon className="h-5 w-5" strokeWidth={1.5} />
-              </a>
-            );
-          })}
-        </div>
+        {/* Desktop social & copyright */}
+        <div className="hidden md:block">
+          <div className="mt-12 flex gap-6">
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                  aria-label={item.name}
+                >
+                  <Icon className="h-5 w-5" strokeWidth={1.5} />
+                </a>
+              );
+            })}
+          </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-neutral-200">
-          <p className="text-sm text-neutral-500">
-            © 2025 KODEX STUDIO · Littleton, CO · Engineered for Excellence
-          </p>
+          <div className="mt-12 pt-8 border-t border-neutral-200">
+            <p className="text-sm text-neutral-500">
+              © 2025 KODEX STUDIO · Engineered for Excellence
+            </p>
+          </div>
         </div>
       </div>
     </footer>

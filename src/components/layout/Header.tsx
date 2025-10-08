@@ -98,7 +98,7 @@ export function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-20 bg-neutral-0 z-40 animate-fade-in">
-          <div className="flex flex-col px-6 py-8 gap-6">
+          <div className="flex flex-col items-center px-6 py-8 gap-8">
             {navigation.map((item) => {
               const isActive = location.pathname === item.href;
 
@@ -106,7 +106,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-xs font-semibold tracking-widest transition-colors uppercase ${
+                  className={`text-lg font-semibold tracking-widest transition-colors uppercase ${
                     isActive
                       ? "text-cyan-400"
                       : "text-neutral-950 hover:text-cyan-400"

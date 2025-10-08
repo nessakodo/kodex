@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import quantumImg from "@/assets/case-study-quantum.jpg";
+import droneImg from "@/assets/case-study-drone.jpg";
 import aiImg from "@/assets/case-study-ai.jpg";
 import healthImg from "@/assets/case-study-health.jpg";
 
@@ -50,7 +51,7 @@ const caseStudies = [
     slug: "verdant",
     category: "ENVIRONMENTAL AI / IOT",
     title: "VERDANT — Living Sensor Platform",
-    image: quantumImg,
+    image: droneImg,
     metrics: [
       { value: "4km", label: "Mesh Range" },
       { value: "12+", label: "Sensor Modules" },
