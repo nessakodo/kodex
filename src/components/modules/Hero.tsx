@@ -35,14 +35,17 @@ export function Hero() {
             afford compromise. Enterprise-grade solutions powered by cutting-edge technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="group">
+            <Button asChild size="lg" className="group hidden sm:inline-flex">
               <Link to="/contact">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/showcase">View Case Studies</Link>
+            <Button asChild variant="outline" size="lg" className="group">
+              <Link to="/showcase">
+                Explore Projects
+                <ArrowRight className="ml-2 h-4 w-4 sm:hidden group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
         </div>
