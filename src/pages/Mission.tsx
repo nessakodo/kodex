@@ -15,52 +15,64 @@ const Mission = () => {
           </p>
         </header>
 
-        <div className="prose prose-neutral max-w-none">
-          <h2 className="h2 mb-4 mt-12">What We Believe</h2>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            Security is not a feature—it's a foundation. In an era where digital
-            infrastructure underpins critical operations, organizations cannot
-            afford reactive approaches to security. We believe in defense-in-depth,
-            zero-trust architectures, and continuous validation.
-          </p>
+        <div className="space-y-8">
+          <div className="bg-black/30 border border-neutral-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-neutral-950">What We Believe</h2>
+            <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+              Security is not a feature—it's a foundation. In an era where digital
+              infrastructure underpins critical operations, organizations cannot
+              afford reactive approaches to security. We believe in defense-in-depth,
+              zero-trust architectures, and continuous validation.
+            </p>
+          </div>
 
-          <h2 className="h2 mb-4 mt-12">How We Work</h2>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            We partner with organizations to design, implement, and operate
-            security infrastructure that scales. Our approach combines threat
-            modeling, secure architecture design, and hands-on implementation—no
-            theoretical frameworks without practical execution.
-          </p>
+          <div className="bg-black/30 border border-neutral-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-neutral-950">How We Work</h2>
+            <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+              We partner with organizations to design, implement, and operate
+              security infrastructure that scales. Our approach combines threat
+              modeling, secure architecture design, and hands-on implementation—no
+              theoretical frameworks without practical execution.
+            </p>
+          </div>
 
-          <h2 className="h2 mb-4 mt-12">Who We Serve</h2>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            Our clients range from healthcare systems protecting patient data to
-            financial infrastructure handling billions in daily transactions. What
-            they share: a recognition that security cannot be an afterthought, and
-            a commitment to doing things correctly.
-          </p>
+          <div className="bg-black/30 border border-neutral-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-neutral-950">Who We Serve</h2>
+            <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
+              Our clients range from healthcare systems protecting patient data to
+              financial infrastructure handling billions in daily transactions. What
+              they share: a recognition that security cannot be an afterthought, and
+              a commitment to doing things correctly.
+            </p>
+          </div>
 
-          <div className="bg-card/50 border border-border rounded-lg p-8 mt-12">
-            <h3 className="h3 mb-4">Our Standards</h3>
+          <div className="bg-black/30 border border-neutral-200 rounded-xl p-6 md:p-8">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-neutral-950">Our Standards</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  <strong className="text-foreground font-medium">Evidence-based security:</strong> Every
+                <span className="inline-block w-1.5 h-1.5 rounded-full mt-2 mr-4 flex-shrink-0" style={{
+                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%)'
+                }} />
+                <span className="text-sm md:text-base text-neutral-600">
+                  <strong className="text-neutral-950 font-semibold">Evidence-based security:</strong> Every
                   recommendation backed by threat modeling and risk analysis.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  <strong className="text-foreground font-medium">Production-ready implementation:</strong> Code
+                <span className="inline-block w-1.5 h-1.5 rounded-full mt-2 mr-4 flex-shrink-0" style={{
+                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%)'
+                }} />
+                <span className="text-sm md:text-base text-neutral-600">
+                  <strong className="text-neutral-950 font-semibold">Production-ready implementation:</strong> Code
                   that ships, not proof-of-concepts that stall.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  <strong className="text-foreground font-medium">Transparent communication:</strong> Clear
+                <span className="inline-block w-1.5 h-1.5 rounded-full mt-2 mr-4 flex-shrink-0" style={{
+                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%)'
+                }} />
+                <span className="text-sm md:text-base text-neutral-600">
+                  <strong className="text-neutral-950 font-semibold">Transparent communication:</strong> Clear
                   documentation, measurable outcomes, no security theater.
                 </span>
               </li>

@@ -9,9 +9,7 @@ const metrics = [
 
 export function TrustIndicators() {
   return (
-    <section className="py-16 bg-neutral-50 border-y border-neutral-200 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5" />
-      
+    <section className="py-16 bg-transparent relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
           {metrics.map((metric, index) => (

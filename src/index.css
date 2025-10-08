@@ -8,25 +8,25 @@
 
 @layer base {
   :root {
-    /* Dark theme palette */
-    --neutral-0: 240 10% 3.9%;
-    --neutral-50: 240 5% 6%;
-    --neutral-100: 240 6% 10%;
-    --neutral-200: 240 5% 15%;
-    --neutral-300: 240 5% 26%;
-    --neutral-400: 240 4% 46%;
-    --neutral-500: 240 5% 64.9%;
-    --neutral-600: 240 5% 84%;
-    --neutral-700: 240 6% 90%;
-    --neutral-800: 240 5% 96%;
+    /* Dark theme palette - pure blacks/grays */
+    --neutral-0: 0 0% 3%;
+    --neutral-50: 0 0% 6%;
+    --neutral-100: 0 0% 10%;
+    --neutral-200: 0 0% 15%;
+    --neutral-300: 0 0% 26%;
+    --neutral-400: 0 0% 46%;
+    --neutral-500: 0 0% 65%;
+    --neutral-600: 0 0% 84%;
+    --neutral-700: 0 0% 90%;
+    --neutral-800: 0 0% 96%;
     --neutral-900: 0 0% 98%;
     --neutral-950: 0 0% 100%;
 
-    /* Hero gradient colors - extracted from the moving gradient */
-    --lavender-light: 245 100% 89%;     /* rgba(199, 196, 255) */
+    /* Hero gradient colors - blue-focused palette */
+    --ice-blue: 200 100% 88%;           /* lighter blue replacing lavender */
     --sky-blue: 197 100% 86%;           /* rgba(182, 218, 255) */
     --aqua-mint: 185 100% 78%;          /* rgba(167, 232, 237) */
-    --periwinkle: 247 100% 77%;         /* rgba(154, 140, 255) */
+    --deep-blue: 210 100% 75%;          /* deeper blue replacing periwinkle */
 
     /* Complementary accent colors */
     --cyan-300: 187 92% 69%;
@@ -35,15 +35,15 @@
     --blue-300: 211 100% 82%;
     --blue-400: 213 94% 78%;
     --blue-500: 217 91% 72%;
-    --purple-300: 245 85% 78%;
-    --purple-400: 247 90% 76%;
-    --purple-500: 250 80% 67%;
+    --teal-300: 180 85% 70%;
+    --teal-400: 182 90% 65%;
+    --teal-500: 185 80% 60%;
 
     /* Accent gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--lavender-light)) 0%, hsl(var(--sky-blue)) 25%, hsl(var(--aqua-mint)) 50%, hsl(var(--periwinkle)) 75%, hsl(var(--lavender-light)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--ice-blue)) 0%, hsl(var(--sky-blue)) 25%, hsl(var(--aqua-mint)) 50%, hsl(var(--deep-blue)) 75%, hsl(var(--ice-blue)) 100%);
     --gradient-accent: linear-gradient(90deg, hsl(var(--sky-blue)) 0%, hsl(var(--aqua-mint)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--neutral-50)) 0%, hsl(var(--neutral-0)) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(var(--cyan-400) / 0.4) 0%, hsl(var(--purple-400) / 0.4) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(var(--cyan-400) / 0.4) 0%, hsl(var(--blue-400) / 0.4) 100%);
 
     /* Semantic colors */
     --success: 142 71% 45%;
@@ -169,8 +169,8 @@
     box-shadow: 0 0 40px hsl(var(--sky-blue) / 0.3), 0 0 60px hsl(var(--aqua-mint) / 0.2);
   }
 
-  .glow-effect-purple {
-    box-shadow: 0 0 40px hsl(var(--periwinkle) / 0.3), 0 0 60px hsl(var(--lavender-light) / 0.2);
+  .glow-effect-blue {
+    box-shadow: 0 0 40px hsl(var(--deep-blue) / 0.3), 0 0 60px hsl(var(--ice-blue) / 0.2);
   }
 
   .border-gradient {
@@ -215,11 +215,11 @@
   .hero-gradient-text {
     background: linear-gradient(
       135deg,
-      rgba(199, 196, 255, 0.9) 0%,
+      rgba(194, 232, 255, 0.9) 0%,
       rgba(182, 218, 255, 1) 25%,
       rgba(167, 232, 237, 0.95) 50%,
-      rgba(154, 140, 255, 0.9) 75%,
-      rgba(199, 196, 255, 0.8) 100%
+      rgba(135, 194, 255, 0.9) 75%,
+      rgba(194, 232, 255, 0.8) 100%
     );
     background-size: 400% 400%;
     background-clip: text;

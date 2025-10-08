@@ -87,14 +87,14 @@ const Showcase = () => {
           {caseStudies.map((study) => (
             <article
               key={study.slug}
-              className="relative border border-neutral-200 rounded-xl p-6 lg:p-12 bg-gradient-to-br from-card to-neutral-50/50 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+              className="relative border border-neutral-200 rounded-xl p-6 lg:p-12 bg-black/30 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
             >
               {/* Gradient background overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Animated border gradient on hover */}
               <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{
-                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                 padding: '1px',
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                 WebkitMaskComposite: 'xor',

@@ -276,10 +276,10 @@ const CaseStudyDetail = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <Link
               to="/contact"
-              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-gradient-to-br from-card to-neutral-50/50 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Gradient background overlay */}
-              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
+              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
 
               {/* Animated border gradient on hover */}
               <span
@@ -299,10 +299,10 @@ const CaseStudyDetail = () => {
               href={study.cta.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-gradient-to-br from-card to-neutral-50/50 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Gradient background overlay */}
-              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
+              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
 
               {/* Animated border gradient on hover */}
               <span

@@ -13,7 +13,6 @@ const footerLinks = {
     { name: "Careers", href: "/careers" },
   ],
   legal: [
-    { name: "Privacy", href: "/security" },
     { name: "Terms", href: "/terms" },
     { name: "Security", href: "/security" },
   ],
@@ -35,9 +34,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
-      
+    <footer className="bg-black relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 relative">
         {/* Mobile: Single column centered */}
         <div className="md:hidden space-y-10">

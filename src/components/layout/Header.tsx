@@ -35,9 +35,9 @@ export function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isHome
           ? scrolled
-            ? "bg-neutral-0/95 backdrop-blur-md border-b border-neutral-200"
-            : "bg-transparent border-b border-transparent"
-          : "bg-neutral-0 border-b border-neutral-200"
+            ? "bg-black/90 backdrop-blur-md"
+            : "bg-black/60 backdrop-blur-sm"
+          : "bg-black/90"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 h-20">
@@ -97,7 +97,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-neutral-0 z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-0 top-20 bg-black/95 backdrop-blur-md z-40 animate-fade-in">
           <div className="flex flex-col items-center px-6 py-8 gap-8">
             {navigation.map((item) => {
               const isActive = location.pathname === item.href;

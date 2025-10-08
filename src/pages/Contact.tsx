@@ -128,7 +128,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-black/30 border border-neutral-200 rounded-xl p-6">
               <div className="flex items-start gap-3 mb-4">
                 <div className="w-8 h-8 rounded-full bg-cyan-400/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div className="pt-4 border-t border-border">
+              <div className="pt-4 border-t border-neutral-200">
                 <p className="text-xs text-neutral-500 leading-relaxed">
                   Trusted by financial services, healthcare organizations, and technology companies requiring uncompromising security standards.
                 </p>
@@ -151,7 +151,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border rounded-lg p-6 lg:p-8">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-black/30 border border-neutral-200 rounded-xl p-6 lg:p-8">
               <div className="space-y-2">
                 <label
                   htmlFor="name"
@@ -249,16 +249,16 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group relative w-full inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-gradient-to-br from-card to-neutral-50/50 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative w-full inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-black/30 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {/* Gradient background overlay */}
-                <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
+                <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
 
                 {/* Animated border gradient on hover */}
                 <span
                   className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                    background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                     padding: '1px',
                     WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                     WebkitMaskComposite: 'xor',

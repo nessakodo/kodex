@@ -107,14 +107,14 @@ const Insights = () => {
                 href={featuredArticle.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block relative overflow-hidden rounded-2xl border border-neutral-200 bg-gradient-to-br from-card to-neutral-50/50 hover:border-transparent hover:shadow-2xl transition-all duration-300"
+                className="group block relative overflow-hidden rounded-2xl border border-neutral-200 bg-black/30 hover:border-transparent hover:shadow-2xl transition-all duration-300"
               >
                 {/* Gradient background overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
 
                 {/* Animated border gradient on hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" style={{
-                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                   padding: '1px',
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                   WebkitMaskComposite: 'xor',
@@ -196,15 +196,15 @@ const Insights = () => {
                       href={article.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative border border-neutral-200 rounded-xl overflow-hidden bg-card/80 backdrop-blur-sm hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 block opacity-0 animate-fade-in"
+                      className="group relative border border-neutral-200 rounded-xl overflow-hidden bg-black/30 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 block opacity-0 animate-fade-in"
                       style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
                     >
                       {/* Gradient background overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
 
                       {/* Animated border gradient on hover */}
                       <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" style={{
-                        background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                        background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                         padding: '1px',
                         WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                         WebkitMaskComposite: 'xor',
@@ -218,7 +218,7 @@ const Insights = () => {
                             alt={article.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
-                          <div className="absolute inset-0 bg-black/40" />
+                          <div className="absolute inset-0 bg-black/30" />
                         </div>
                       )}
 
@@ -265,16 +265,16 @@ const Insights = () => {
                     <button
                       onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
                       disabled={currentPage === 1}
-                      className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-neutral-950 border border-neutral-200 bg-card/80 backdrop-blur-sm rounded-lg hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-neutral-200 disabled:hover:shadow-none"
+                      className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-neutral-950 border border-neutral-200 bg-black/30 rounded-lg hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-neutral-200 disabled:hover:shadow-none"
                     >
                       {/* Gradient background overlay */}
-                      <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
+                      <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
 
                       {/* Animated border gradient on hover */}
                       <span
                         className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                          background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                           padding: '1px',
                           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                           WebkitMaskComposite: 'xor',
@@ -296,19 +296,19 @@ const Insights = () => {
                           className={`group relative w-11 h-11 flex-shrink-0 rounded-lg text-sm font-semibold transition-all duration-300 overflow-hidden ${
                             currentPage === page
                               ? "border border-neutral-200 bg-gradient-to-br from-sky-blue/10 to-aqua-mint/10 text-neutral-950"
-                              : "border border-neutral-200 bg-card/80 backdrop-blur-sm text-neutral-950 hover:border-transparent hover:shadow-2xl"
+                              : "border border-neutral-200 bg-black/30 text-neutral-950 hover:border-transparent hover:shadow-2xl"
                           }`}
                         >
                           {currentPage !== page && (
                             <>
                               {/* Gradient background overlay */}
-                              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
+                              <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
 
                               {/* Animated border gradient on hover */}
                               <span
                                 className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                                 style={{
-                                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                                  background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                                   padding: '1px',
                                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                                   WebkitMaskComposite: 'xor',
@@ -325,16 +325,16 @@ const Insights = () => {
                     <button
                       onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
                       disabled={currentPage === totalPages}
-                      className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-neutral-950 border border-neutral-200 bg-card/80 backdrop-blur-sm rounded-lg hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-neutral-200 disabled:hover:shadow-none"
+                      className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-neutral-950 border border-neutral-200 bg-black/30 rounded-lg hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-neutral-200 disabled:hover:shadow-none"
                     >
                       {/* Gradient background overlay */}
-                      <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
+                      <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg" />
 
                       {/* Animated border gradient on hover */}
                       <span
                         className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                          background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                           padding: '1px',
                           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                           WebkitMaskComposite: 'xor',

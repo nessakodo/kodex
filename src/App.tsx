@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import ThinkingUniverse from "@/components/ui/ThinkingUniverse";
 import Index from "./pages/Index";
 import Mission from "./pages/Mission";
 import Services from "./pages/Services";
@@ -26,12 +27,13 @@ function AppContent() {
   const isHome = location.pathname === "/";
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-neutral-950">
+      <ThinkingUniverse />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <Header />
-      <main id="main-content" className={`flex-1 ${!isHome ? 'pt-20' : ''}`}>
+      <main id="main-content" className={`flex-1 relative z-10 ${!isHome ? 'pt-20' : ''}`}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/mission" element={<Mission />} />

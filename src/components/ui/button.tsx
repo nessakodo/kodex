@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "border-transparent bg-gradient-to-br from-card to-neutral-50/50 text-neutral-950 hover:shadow-xl hover:shadow-sky-blue/15 active:shadow-glow-blue focus-visible:ring-sky-blue font-medium",
+        default: "border-transparent bg-black/30 text-neutral-950 hover:shadow-xl hover:shadow-sky-blue/15 active:shadow-glow-blue focus-visible:ring-sky-blue font-medium",
         outline:
           "border border-neutral-300 bg-transparent text-neutral-950 hover:bg-neutral-50 hover:border-sky-blue/50 font-medium focus-visible:ring-sky-blue",
         secondary:
@@ -47,14 +47,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <>
             {/* Gradient background overlay */}
             <span
-              className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md"
+              className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-deep-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md"
               style={{ zIndex: 0 }}
             />
             {/* Gradient border - always visible */}
             <span
               className="absolute inset-0 rounded-md transition-opacity duration-300 pointer-events-none"
               style={{
-                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 33%, rgba(135, 194, 255, 0.4) 66%, rgba(194, 232, 255, 0.3) 100%)',
                 padding: '1px',
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                 WebkitMaskComposite: 'xor',
