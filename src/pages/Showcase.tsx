@@ -87,17 +87,26 @@ const Showcase = () => {
           {caseStudies.map((study) => (
             <article
               key={study.slug}
-              className="relative border border-neutral-200 rounded-xl p-6 lg:p-12 bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+              className="relative border border-neutral-200 rounded-xl p-6 lg:p-12 bg-gradient-to-br from-card to-neutral-50/50 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
             >
               {/* Gradient background overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* Animated border gradient on hover */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                padding: '1px',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude'
+              }} />
               <div className="relative grid lg:grid-cols-3 gap-6 lg:gap-8">
                 <div className="lg:col-span-2">
                   <header className="mb-6">
                     <span className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full mb-4">
                       {study.category}
                     </span>
-                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight tracking-tight">{study.title}</h2>
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight tracking-tight transition-colors duration-300">{study.title}</h2>
                     <p className="text-sm text-neutral-600">{study.client}</p>
                   </header>
 

@@ -94,13 +94,25 @@ const Services = () => {
           {services.map((service, idx) => (
             <article
               key={idx}
-              className="relative border border-neutral-200 rounded-xl p-8 bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+              className="relative border border-neutral-200 rounded-xl p-8 bg-gradient-to-br from-card to-neutral-50/50 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+              style={{
+                '--hover-glow': 'drop-shadow(0 0 20px rgba(182, 218, 255, 0.3))'
+              } as React.CSSProperties}
             >
               {/* Gradient background overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* Animated border gradient on hover */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                padding: '1px',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude'
+              }} />
 
               <div className="relative">
-                <h2 className="text-xl font-bold text-neutral-950 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                <h2 className="text-xl font-bold text-neutral-950 mb-4 group-hover:text-accent transition-colors duration-300">
                   {service.title}
                 </h2>
 
@@ -111,7 +123,9 @@ const Services = () => {
                 <div className="space-y-2.5 pt-6 border-t border-neutral-200/50">
                   {service.offerings.map((offering, i) => (
                     <div key={i} className="flex items-start text-sm text-neutral-600 leading-relaxed">
-                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 mr-3 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full mt-2 mr-3 flex-shrink-0" style={{
+                        background: 'linear-gradient(135deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%)'
+                      }} />
                       <span>{offering}</span>
                     </div>
                   ))}

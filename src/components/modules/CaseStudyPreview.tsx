@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import quantumImg from "@/assets/case-study-quantum.jpg";
@@ -77,31 +76,42 @@ function CaseStudyCard({ study, index }: { study: typeof caseStudies[0]; index: 
   return (
     <Link
       to={`/showcase/${study.slug}`}
-      className={`group relative bg-card border border-neutral-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 ${
+      className={`group relative bg-gradient-to-br from-card to-neutral-50/50 border border-neutral-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 ${
         show ? "animate-fade-in" : "opacity-0"
       }`}
     >
-      <div className="relative h-64 overflow-hidden bg-neutral-100">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
+
+      {/* Animated border gradient on hover */}
+      <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" style={{
+        background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+        padding: '1px',
+        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+        WebkitMaskComposite: 'xor',
+        maskComposite: 'exclude'
+      }} />
+      <div className="relative h-64 overflow-hidden bg-neutral-100 z-0">
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-50 to-neutral-100 animate-[shimmer_1.5s_ease-in-out_infinite] bg-[length:200%_100%] z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-50 to-neutral-100 animate-[shimmer_1.5s_ease-in-out_infinite] bg-[length:200%_100%]" />
         )}
         <img
           src={study.image}
           alt={study.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 absolute inset-0"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           onLoad={() => setImageLoaded(true)}
           loading="eager"
           decoding="async"
           style={{ visibility: imageLoaded ? "visible" : "hidden" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-0 via-neutral-0/50 to-transparent z-20" />
-        <span className="absolute top-4 left-4 text-xs font-bold tracking-widest text-cyan-400 bg-neutral-0/90 backdrop-blur-sm px-3 py-1.5 rounded-full z-30">
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-0 via-neutral-0/50 to-transparent" />
+        <span className="absolute top-4 left-4 text-xs font-bold tracking-widest text-cyan-400 bg-neutral-0/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
           {study.category}
         </span>
       </div>
 
-      <div className="p-6 lg:p-8">
-        <h3 className="text-xl lg:text-2xl font-bold mb-4 text-neutral-950 group-hover:gradient-accent-text transition-all">
+      <div className="relative p-6 lg:p-8 z-20">
+        <h3 className="text-xl lg:text-2xl font-bold mb-4 text-neutral-950 group-hover:text-accent transition-colors duration-300">
           {study.title}
         </h3>
 
@@ -162,12 +172,30 @@ export function CaseStudyPreview() {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" variant="outline">
-            <Link to="/showcase">
+          <Link
+            to="/showcase"
+            className="group relative inline-flex items-center justify-center gap-2 h-11 px-6 border border-neutral-200 bg-gradient-to-br from-card to-neutral-50/50 text-neutral-950 text-sm font-medium rounded-md hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            {/* Gradient background overlay */}
+            <span className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-md" />
+
+            {/* Animated border gradient on hover */}
+            <span
+              className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              style={{
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                padding: '1px',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude',
+              }}
+            />
+
+            <span className="relative z-10 flex items-center gap-2">
               View All Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+              <ArrowRight className="h-4 w-4" />
+            </span>
+          </Link>
         </div>
       </Container>
     </section>

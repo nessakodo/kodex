@@ -80,30 +80,50 @@ export function ServiceGrid() {
           {services.map((service, index) => (
             <article
               key={service.title}
-              className="group relative bg-card border border-neutral-200 rounded-lg p-6 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group relative bg-gradient-to-br from-card to-neutral-50/50 border border-neutral-200 rounded-lg p-6 transition-all duration-300 hover:border-transparent hover:shadow-2xl hover:-translate-y-1 overflow-hidden"
+              style={{
+                animationDelay: `${index * 100}ms`
+              }}
             >
-              <div className="border-l-2 border-cyan-400 pl-4 mb-4">
-                <h3 className="text-lg font-bold text-neutral-950 mb-2">
-                  {service.title}
-                </h3>
+              {/* Gradient background overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-periwinkle/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+              {/* Animated border gradient on hover */}
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{
+                background: 'linear-gradient(135deg, rgba(182, 218, 255, 0.4) 0%, rgba(167, 232, 237, 0.4) 25%, rgba(154, 140, 255, 0.4) 50%, rgba(199, 196, 255, 0.3) 100%)',
+                padding: '1px',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude'
+              }} />
+
+              <div className="relative">
+                <div className="border-l-2 pl-4 mb-4" style={{
+                  borderImage: 'linear-gradient(180deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%) 1'
+                }}>
+                  <h3 className="text-lg font-bold text-neutral-950 mb-2 group-hover:text-accent transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="text-sm text-neutral-600 mb-5 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <ul className="space-y-2">
+                  {service.deliverables.map((item) => (
+                    <li
+                      key={item}
+                      className="text-sm text-neutral-500 flex items-start gap-2"
+                    >
+                      <div className="w-1 h-1 rounded-full mt-2 flex-shrink-0" style={{
+                        background: 'linear-gradient(135deg, rgba(182, 218, 255, 1) 0%, rgba(167, 232, 237, 1) 100%)'
+                      }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <p className="text-sm text-neutral-600 mb-5 leading-relaxed">
-                {service.description}
-              </p>
-
-              <ul className="space-y-2">
-                {service.deliverables.map((item) => (
-                  <li
-                    key={item}
-                    className="text-sm text-neutral-500 flex items-start gap-2"
-                  >
-                    <div className="w-1 h-1 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>

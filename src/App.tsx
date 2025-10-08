@@ -56,7 +56,7 @@ const App = () => (
     <Helmet defaultTitle="KODEX STUDIO - Security Infrastructure for Modern Software">
       <meta name="description" content="Enterprise-grade security architecture, cryptography, and infrastructure hardening services. We build and secure production systems for organizations that can't afford compromise." />
       <meta name="keywords" content="cybersecurity, security architecture, cryptography, cloud security, compliance, HIPAA, SOC 2, penetration testing" />
-      <meta property="og:title" content="KODEX STUDIO - Security Infrastructure for Modern Software" />
+      <meta property="og:title" content="KODEX STUDIO - Security Infrastructure for Modern Softwarer" />
       <meta property="og:description" content="Enterprise-grade security solutions powered by cutting-edge technology." />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://kodexstudio.com" />
