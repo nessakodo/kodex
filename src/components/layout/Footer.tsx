@@ -61,7 +61,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                  className="text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                   aria-label={item.name}
                 >
                   <Icon className="h-6 w-6" strokeWidth={1.5} />
@@ -216,7 +216,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-500 hover:text-cyan-400 transition-colors-smooth"
+                  className="text-neutral-500 hover:text-sky-blue transition-colors-smooth"
                   aria-label={item.name}
                 >
                   <Icon className="h-5 w-5" strokeWidth={1.5} />

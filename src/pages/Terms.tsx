@@ -241,7 +241,7 @@ const Terms = () => {
           <div className="mt-12 md:mt-16 bg-black/30 border border-neutral-200 rounded-xl p-6 md:p-8 text-center">
             <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
               Questions about our terms?{" "}
-              <a href="mailto:legal@kodexstudio.com" className="text-cyan-400 hover:underline font-semibold">
+              <a href="mailto:legal@kodexstudio.com" className="text-sky-blue hover:underline font-semibold">
                 Contact our legal team
               </a>
             </p>

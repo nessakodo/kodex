@@ -105,7 +105,7 @@ function CaseStudyCard({ study, index }: { study: typeof caseStudies[0]; index: 
           style={{ visibility: imageLoaded ? "visible" : "hidden" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-0 via-neutral-0/50 to-transparent" />
-        <span className="absolute top-4 left-4 text-xs font-bold tracking-widest text-cyan-400 bg-neutral-0/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+        <span className="absolute top-6 left-6 inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm z-10">
           {study.category}
         </span>
       </div>
@@ -143,7 +143,7 @@ function CaseStudyCard({ study, index }: { study: typeof caseStudies[0]; index: 
           ))}
         </div>
 
-        <div className="flex items-center text-cyan-400 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+        <div className="flex items-center text-sky-blue font-semibold text-sm group-hover:translate-x-2 transition-transform">
           View Case Study
           <ArrowRight className="ml-2 h-4 w-4" />
         </div>

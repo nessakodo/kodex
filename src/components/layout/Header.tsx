@@ -31,6 +31,7 @@ export function Header() {
   }, [isHome]);
 
   return (
+    <>
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isHome
@@ -44,7 +45,7 @@ export function Header() {
         <Link to="/" className="flex items-center group">
           <span className="text-2xl font-bold tracking-tight">
             <span className="text-neutral-950">KODEX</span>
-            <span className="text-cyan-400 ml-1">STUDIO</span>
+            <span className="text-sky-blue ml-1">STUDIO</span>
           </span>
         </Link>
 
@@ -59,8 +60,8 @@ export function Header() {
                 to={item.href}
                 className={`text-xs font-semibold tracking-widest transition-colors uppercase ${
                   isActive
-                    ? "text-cyan-400"
-                    : "text-neutral-950 hover:text-cyan-400"
+                    ? "text-sky-blue"
+                    : "text-neutral-950 hover:text-sky-blue"
                 }`}
               >
                 {item.name}
@@ -72,7 +73,7 @@ export function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="md:hidden p-2 text-neutral-950 hover:text-cyan-400 transition-colors relative"
+          className="md:hidden p-2 text-neutral-950 hover:text-sky-blue transition-colors relative"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -94,10 +95,11 @@ export function Header() {
           </div>
         </button>
       </nav>
+    </header>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-20 bottom-0 bg-black z-[60] animate-slide-down">
+    {/* Mobile menu - outside header for proper z-index */}
+    {mobileMenuOpen && (
+      <div className="md:hidden fixed inset-x-0 top-20 bottom-0 bg-black z-[60] animate-slide-down">
           <div className="flex flex-col items-center px-6 py-8 gap-8">
             {navigation.map((item) => {
               const isActive = location.pathname === item.href;
@@ -108,8 +110,8 @@ export function Header() {
                   to={item.href}
                   className={`text-lg font-semibold tracking-widest transition-colors uppercase ${
                     isActive
-                      ? "text-cyan-400"
-                      : "text-neutral-950 hover:text-cyan-400"
+                      ? "text-sky-blue"
+                      : "text-neutral-950 hover:text-sky-blue"
                   }`}
                 >
                   {item.name}
@@ -119,6 +121,6 @@ export function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

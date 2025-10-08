@@ -131,7 +131,7 @@ const Careers = () => {
 
           {/* Contact */}
           <div className="text-center bg-black/30 border border-neutral-200 rounded-xl p-8 md:p-12">
-            <Mail className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-cyan-400" />
+            <Mail className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-4 text-sky-blue" />
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-neutral-950">Don't See a Fit?</h3>
             <p className="text-sm md:text-base text-neutral-600 mb-6 max-w-xl mx-auto leading-relaxed">
               We're always looking for exceptional talent. Send us your resume and

@@ -82,7 +82,7 @@ const Insights = () => {
 
         {loading && (
           <div className="text-center py-12">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-cyan-400 border-r-transparent"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-sky-blue border-r-transparent"></div>
             <p className="mt-4 text-neutral-600">Loading articles...</p>
           </div>
         )}
@@ -122,7 +122,7 @@ const Insights = () => {
                 }} />
                 {/* Featured Badge */}
                 <div className="absolute top-6 left-6 z-30">
-                  <span className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full bg-card backdrop-blur-sm">
+                  <span className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm">
                     LATEST POST
                   </span>
                 </div>
