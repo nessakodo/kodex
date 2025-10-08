@@ -94,7 +94,7 @@ const Showcase = () => {
               <div className="relative grid lg:grid-cols-3 gap-6 lg:gap-8">
                 <div className="lg:col-span-2">
                   <header className="mb-6">
-                    <span className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-3 py-1 rounded mb-4">
+                    <span className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full mb-4">
                       {study.category}
                     </span>
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 leading-tight tracking-tight">{study.title}</h2>
@@ -118,7 +118,7 @@ const Showcase = () => {
                     {study.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="text-xs text-neutral-600 border border-neutral-200 px-3 py-1 rounded"
+                        className="text-xs text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>

@@ -102,7 +102,7 @@ const Insights = () => {
         {!loading && !error && featuredArticle && (
           <>
             {/* Featured Article Hero */}
-            <article className="mb-16">
+            <article className="mb-16 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
               <a
                 href={featuredArticle.url}
                 target="_blank"
@@ -135,7 +135,7 @@ const Insights = () => {
                       {featuredArticle.tag_list.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-3 py-1 rounded"
+                          className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full"
                         >
                           {tag}
                         </span>
@@ -179,13 +179,14 @@ const Insights = () => {
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-                  {currentArticles.map((article) => (
+                  {currentArticles.map((article, index) => (
                     <a
                       key={article.id}
                       href={article.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative border border-neutral-200 rounded-xl overflow-hidden bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 block"
+                      className="group relative border border-neutral-200 rounded-xl overflow-hidden bg-gradient-to-br from-card to-neutral-50/50 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all duration-300 block opacity-0 animate-fade-in"
+                      style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
                     >
                       {/* Gradient background overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
@@ -206,7 +207,7 @@ const Insights = () => {
                           {article.tag_list.slice(0, 2).map((tag) => (
                             <span
                               key={tag}
-                              className="inline-block text-xs font-medium uppercase tracking-wider text-accent bg-accent-subtle px-2 py-1 rounded"
+                              className="inline-block text-xs font-medium uppercase tracking-wider text-neutral-600 border border-neutral-200 px-3 py-1 rounded-full"
                             >
                               {tag}
                             </span>
